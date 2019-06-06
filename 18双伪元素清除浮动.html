@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动</title>
+    <style>
+        *{padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .box1{
+
+            width: 600px;
+            background-color: pink;
+        }
+        .son1{
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+            float: left
+        }
+        .son2{
+            width: 300px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+        }
+
+        .box2{
+            width: 600px;
+            height: 240px;
+            background-color: purple;
+        }
+        .clearfix:before,.clearfix:afer{
+            content: "";
+            display: table;   /*触发bfc 防止外边距合并*/
+        }
+        .clearfix:after{
+            clear: both;
+        }
+        .clearfix{
+            *zoom: 1;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="box1 clearfix">
+    <div class="son1">1</div>
+    <div class="son2">2</div>
+</div>
+<div class="box2"></div>
+
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通栏分配性</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .banner,
+        .main,
+        .banner{
+            width: 960px;
+            text-align: center;
+            border: 1px dashed black;
+        }
+
+        .top{
+            height: 80px;
+            background-color:gray;
+        }
+
+        .banner{
+            width: 960px;
+            height: 400px;
+            background-color: rosybrown;
+            border-radius: 10px;
+            margin: 20px auto;
+        }
+        .main{
+            width: 960px;
+            height: 200px;
+            margin: 20px auto;
+
+        }
+        .main ul li{
+            list-style: none;
+            height: 200px;
+            width: 240px;
+            float: left;
+            background-color: orange
+        }
+         ul li:nth-child(odd){
+            background-color: pink;}
+        .footer{
+            height: 150px;
+            background-color: lightpink;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top">top</div>
+    <div class="banner">banner</div>
+    <div class="main">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ul>
+    </div>
+    <div class="footer">footer</div>
+</body>
+</html>

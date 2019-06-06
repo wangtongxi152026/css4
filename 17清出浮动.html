@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>清除浮动</title>
+    <style>
+        *{padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .box1{
+
+            width: 600px;
+            background-color: pink;
+        }
+        .son1{
+            width: 150px;
+            height: 100px;
+            background-color: skyblue;
+            float: left
+        }
+        .son2{
+            width: 300px;
+            height: 100px;
+            background-color: orange;
+            float: left;
+        }
+
+        .box2{
+            width: 600px;
+            height: 240px;
+            background-color: purple;
+        }
+        .clearfix:after{
+            content: '.'; /*内容为小点，尽量不要为空， 旧版浏览器会有缝隙*/
+            height: 0;
+            display: block;/*转化为块级元素*/
+            visibility: hidden;/* 隐藏盒子*/
+            clear: both;    /*清除浮动*/
+        }
+        .clearfix{*zoom: 1;}/*缺点：  由于IE6-7不支持:after，使用 zoom:1触发 hasLayout。*/
+    </style>
+</head>
+<body>
+
+<div class="box1 clearfix">
+    <div class="son1">1</div>
+    <div class="son2">2</div>
+</div>
+<div class="box2"></div>
+
+</body>
+</html>
